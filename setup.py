@@ -6,6 +6,7 @@ setup(
     py_modules=['genPDFStack'],
     install_requires=[
         'Click',
+        
     ],
     entry_points='''
         [console_scripts]
