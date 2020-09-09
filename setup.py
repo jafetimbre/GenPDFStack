@@ -6,7 +6,7 @@ setup(
     py_modules=['genPDFStack'],
     install_requires=[
         'Click',
-        
+        'reportlab'
     ],
     entry_points='''
         [console_scripts]

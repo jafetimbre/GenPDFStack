@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<cards>
+    <figure path="test\input\images\dinowalk.jpg"/>
+    <figure path="test\input\images\kiss.jpg"/>
+    <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</text>
+    <text>Proin quis urna et ante ullamcorper interdum eu non ipsum.</text>
+    <figure path="test\input\images\kwbeach.jpg"/>
+    <text>Praesent consequat nunc ut eros ultricies, non venenatis risus egestas.</text>
+    <figure path="test\input\images\stgeorgeginger.jpg"/>
+    <text>Etiam convallis arcu venenatis vulputate sagittis.</text>
+    <figure path="test\input\images\stgeorgeginger.jpg"/>
+    <text>Etiam convallis arcu venenatis vulputate sagittis.</text>
+</cards>
