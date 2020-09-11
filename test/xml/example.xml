@@ -1,9 +1,0 @@
-<?xml version="1.0" ?>
-<cards>
-  <figure path="./path/figure/front/of/card">This is the text from the back of the card</figure>
-  <text>This is the text from the front of the card</text>
-  <!--
-        Modify this file using only the two tags shown above with their available attributes. 
-        Using custom tags or atributes may result in application failure.
-        -->
-</cards>

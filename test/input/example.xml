@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<main>
+  <pageConfig>
+    <pageWidth>8.5</pageWidth>
+    <pageHeight>11</pageHeight>
+    <font>Varta-Regular</font>
+    <fontSize>18</fontSize>
+  </pageConfig>
+
+  <content>
+    <card> 
+      <image path="test\input\images\dinowalk.jpg" />
+      <text text="Etiam convallis arcu venenatis vulputate sagittis." />
+    </card>
+    
+    <card>
+      <image path="test\input\images\kiss.jpg" />
+      <text text="Praesent consequat nunc ut eros ultricies, non venenatis risus egestas." />
+    </card>
+
+    <card>
+      <image path="test\input\images\kwbeach.jpg" />
+      <text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+    </card>
+
+    <card>
+      <text text="Front card"/>
+      <text text="Back card" />
+    </card>
+
+    <card> 
+      <image path="test\input\images\dinowalk.jpg" />
+      <text text="In in massa dignissim, hendrerit arcu quis, vehicula risus." />
+    </card>
+
+    <card>
+      <text text="Just front card"/>
+    </card>
+
+    <card>
+    <!-- Empty card -->
+    </card>
+
+  </content>
+</main>
