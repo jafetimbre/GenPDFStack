@@ -7,7 +7,25 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import xml.etree.ElementTree as ET
-from Tags import Tags 
+from enum import Enum
+
+
+class Tags(Enum):
+    # Main, root tag
+    MAIN = 'main'
+    
+    # Page configuration tags
+    PAGECONFIG = 'pageConfig'
+    PAGEWIDTH = 'pageWidth'
+    PAGEHEIGHT = 'pageHeight'
+    FONT = 'font'
+    FONTSIZE = 'fontSize'
+
+    # Content tags
+    CONTENT = 'content'
+    CARD = 'card'
+    IMAGE = 'image'
+    TEXT = 'text'
 
 
 @click.option('-s', '--page-size', 
