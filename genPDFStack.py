@@ -4,9 +4,8 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.pagesizes import landscape
 from reportlab.lib.units import mm, inch
-from reportlab.platypus import Image, Frame, Paragraph, Flowable, SimpleDocTemplate
+from reportlab.platypus import Image, Frame, Paragraph, SimpleDocTemplate
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-import Card
 
 @click.group()
 
@@ -326,73 +325,7 @@ def generate_from_file(output, page_size, unit, file, page_numbers, debug, set_f
 
     pdf.save()
 
-
-        # Another version 
-    return
-    #   Adding the frames to the paper orgaised
-    # for card in root:
-    #     if (next_x + frameStyle['width'] + frameStyle['margin'] > width):
-    #         next_x = frameStyle['margin'] + paper_xPadding
-    #         next_y = next_y - 2*frameStyle['margin'] - frameStyle['height']
-    #         if (next_y < 0):
-    #             pdf.showPage()
-    #             next_x = frameStyle['margin'] + paper_xPadding
-    #             next_y = height - frameStyle['height'] - frameStyle['margin'] - paper_yPadding
-
-    #     content = []
-
-    #     if (card.tag == 'figure'):
-    #         im = Image(card.attrib['path'], width=frameStyle['width'], height=frameStyle['height'])
-            
-    #         content.append(im)
-    #     elif (card.tag == 'text'):
-    #         p_text = Paragraph(card.text, style=my_style)
-
-    #         content.append(p_text)
-
-    #         free_space = frameStyle['height'] - frameStyle['topPadding'] - frameStyle['bottomPadding']
-    #         free_space -= p_text.wrap(
-    #             frameStyle['width'] - frameStyle['leftPadding'] - frameStyle['rightPadding'] \
-    #             + 2 * p_text.style.borderPadding, \
-    #             frameStyle['height'] - frameStyle['topPadding'] - frameStyle['bottomPadding'])[1] \
-    #             + p_text.style.borderPadding * 2 + 1
-    #         free_space += p_text.style.borderPadding * 2
-    #         # frameStyle['topPadding'] = free_space / 2
-
-    #     #   Creating the frame for the images or text
-    #     frame = Frame(
-    #         next_x,
-    #         next_y,
-    #         frameStyle['width'],
-    #         frameStyle['height'],
-    #         showBoundary=1,
-    #         topPadding=frameStyle['topPadding'],
-    #         bottomPadding=frameStyle['bottomPadding'],
-    #         leftPadding=frameStyle['leftPadding'],
-    #         rightPadding=frameStyle['rightPadding'])
-
-    #     #   Drawing the frame to the paper
-    #     frame.addFromList(content, pdf)
-
-    #     frameStyle['topPadding'] = 0
-    #     next_x = next_x + 3.5*inch + 2*frameStyle['margin']
-    
-    pdf.showPage()
-    pdf.save()
-
 def print_help():
     ctx = click.get_current_context()
     click.echo(ctx.get_help())
     ctx.exit()
-
-
-
-
-@click.option('-o','--output', 
-    type=click.File('wb'), 
-    default='./test/output.pdf', 
-    help='Specify the output path and filename (default is current working directory)')
-
-@main.command(name='gen')
-def generate(output):
-    print('asd')
