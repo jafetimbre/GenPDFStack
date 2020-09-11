@@ -23,7 +23,7 @@ def main():
 
 @click.option('-o','--output', 
     type=click.File('wb'), 
-    default='./test/output.pdf', 
+    default='./output.pdf', 
     help='Specify the output path and filename (default is current working directory)')
 
 @click.option('-s', '--page-size', 
