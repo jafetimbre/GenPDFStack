@@ -81,10 +81,7 @@ def main(file, output, page_size, unit, debug, h_cut_lines, v_cut_lines):
     If you dont know how to write the XML file, just run the command without any arguments. 
     This will generate a modifiable example file.
     '''
-    pdfmetrics.registerFont(TTFont('Varta-Bold', r'lib\fonts\Varta-Bold.ttf'))
-    pdfmetrics.registerFont(TTFont('Varta-Light', r'lib\fonts\Varta-Light.ttf'))
-    pdfmetrics.registerFont(TTFont('Varta-Regular', r'lib\fonts\Varta-Regular.ttf'))
-    pdfmetrics.registerFont(TTFont('Varta-SemiBold', r'lib\fonts\Varta-SemiBold.ttf'))
+    pdfmetrics.registerFont(TTFont('Varta-Regular', r'fonts\Varta-Regular.ttf'))
 
     # Some default values
     DEFAULTS = {
@@ -293,3 +290,6 @@ def print_help():
     ctx = click.get_current_context()
     click.echo(ctx.get_help())
     ctx.exit()
+
+if __name__ == '__main__':
+    main()
